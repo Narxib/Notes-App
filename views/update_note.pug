@@ -1,0 +1,15 @@
+extends layout.pug
+block header
+    title Update Note
+    style
+        include ../styles/notes/create_note.css
+block content
+    div(class="noteContainer")
+        form(action=`/note/update_note/${note.id}` method="post" )
+                label(for="title") Title
+                input(class="title_input" name="title" id="title" value= note.title)
+                label(for="content") Content
+                input(class="content_input" name="content" id="content" value= note.content)
+                input(type="submit" value="Update")
+
+

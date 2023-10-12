@@ -1,0 +1,14 @@
+extends layout.pug
+block header
+    title Sign Up
+    style
+        include ../styles/log.css
+
+block content
+    div(class="loginContainer")
+        form(action="/signup" method="post")
+            label(for="email") Email
+            input(name="email" type="email" id="email")
+            label(for="password") Password
+            input(name="password" type="password" id="password")
+            input(type="submit" value="Register")

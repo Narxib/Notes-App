@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    width:100vw;
+    max-width: 100%;
+    height:100vh;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(247, 247, 237);
+
+}
+
+
+.navbar{
+    display: flex;
+    width:100vw;
+    max-width: 100%;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(230, 242, 152);
+}
+
+
+.link{
+    font-size: clamp(1rem,5vw, 1.5rem);
+    text-decoration: none;
+    margin-left: 20px;
+    padding:10px;
+}
+
+.link:hover{
+    background-color:   rgb(242, 248, 203);
+}
+
+.link:active{
+    color:black;
+}
+
+.image_section{
+    float: right; 
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.image_section img{
+    left:10px;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+}  
+
+.note_container{
+    display:flex;
+    padding:20px 20px;
+    width:90vw;
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+}
+
+.note{
+    display: inline-block;
+    margin:10px;
+    align-items: center;
+    width:250px;
+    height:250px;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 6px 3px 13px -4px rgba(0,0,0,0.75);
+    align-content: center;
+    background-color: rgb(230, 242, 152);
+}
+
+.title_container{
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(242, 248, 203);
+    border-radius: 10px;
+    padding:5px;
+    word-wrap: normal;
+    cursor: default;
+}
+
+.content_container{
+    display: block;
+    background-color:  rgb(242, 248, 203);
+    border-radius: 10px;
+    padding: 10px;
+    word-wrap:break-word;
+    cursor:default;
+    height:auto;
+}
+
+.action_buttons{
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  left:200px;
+  bottom:40px;
+
+}
+.action_buttons button{
+    background-color: rgb(230, 242, 152);
+    border-radius: 10px;
+    border: 2px solid rgb(189, 199, 123);
+}
+.action_buttons button:hover{
+    background-color: rgb(242, 248, 203);
+}
+
+.action_buttons i{
+    font-size: 20px;
+    background-color: none;
+    padding:10px;
+}
+
+.action_buttons button:hover{
+    cursor: pointer;
+}
+
+.new_note{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:150px;
+    padding:20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 6px 3px 13px -4px rgba(0,0,0,0.75);
+    font-size: 4rem;
+    border: none;
+    background-color: rgb(230, 242, 152);
+}
+
+.new_note:hover{
+    cursor: pointer;
+    border:2px solid black;
+}
+
+.new_note a{
+    text-decoration: none;
+    font-size:2rem;
+}
+
+.signupAlert{
+    text-align: center;
+    background-color: #F37155;
+}
+
+.signinAlert{
+    text-align: center;
+    background-color: #F37155;
+}
+

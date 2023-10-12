@@ -1,0 +1,28 @@
+html 
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+header 
+    block header
+    style 
+        include ../styles/notes/notes.css
+
+    nav(class="navbar")
+        if(user)
+            a(class="link" href="/") My Notes
+            a(class="link" href="/notes") All Notes
+            a(class="link" href="/note/create_note") Create Note
+            a(class="link" href="/logout") Log Out
+
+        else 
+            a(class="link" href="/notes") All Notes
+            a(class="link" href="/signin") Sign In
+            a(class="link" href="/signup") Sign Up   
+body
+    if signupMessage
+        div(class="signupAlert") #{signupMessage}
+    if signinMessage
+        div(class="signinAlert") #{signinMessage}
+    h2= user
+    block content
+    block notes
+    block script
+footer 

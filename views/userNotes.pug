@@ -1,0 +1,22 @@
+extends layout.pug
+block header 
+block notes 
+    div(class="note_container")
+        each note in data
+            div(class="note")
+                if note.author == user
+                    div(class="action_buttons")
+                        form(class="delete_form" method="get")
+                            button(type="submit" formaction=`../note/delete_note/${note.id}`) 
+                                i(class="fa-solid fa-trash" style="color: #e14119;")
+                        form(class="update_form" method="get")
+                            button(type="submit" formaction=`../note/update_note/${note.id}`)
+                                i(class="fa-solid fa-pen-to-square") 
+                div(class="title_container")
+                    h1(id="title")= note.title
+                    h3=note.author
+                div(class="content_container")= note.content
+        if(user)
+            button(class="new_note" type="button" onclick="location.href=`/note/create_note`") +
+block script
+     script(src="https://kit.fontawesome.com/b6412059a4.js" crossorigin="anonymous")
