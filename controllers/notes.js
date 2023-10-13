@@ -5,7 +5,7 @@ import { Mongoose, Types } from 'mongoose';
 const { ObjectId } = Types;
 
 export class notesControllers{
-    static async landing(req,res){
+    static async userNotes(req,res){
         const {id,email,pass}=req.user
         console.log(email)
         const notes = await Note.find({author:email})
@@ -46,8 +46,8 @@ export class notesControllers{
         newNote.save()
         .then((result)=>{
             console.log("Note created",result)
-            req.flash("createNoteMessage","Note created0 ")
-            res.redirect("../userNotes")
+            req.flash("createNoteMessage","Note created")
+            res.redirect("/")
         })
     }
 

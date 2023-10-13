@@ -4,14 +4,14 @@ import { isLoggedIn } from "../index.js"
 export const notesRoutes = Router()
 
 //GET ROUTES
-notesRoutes.get("/",isLoggedIn, notesControllers.landing)
+notesRoutes.get("/",isLoggedIn, notesControllers.userNotes)
 notesRoutes.get("/notes", notesControllers.renderAllNotes)
-notesRoutes.get("/note/create_note", notesControllers.newNoteForm)
-notesRoutes.get("/note/delete_note/:id",notesControllers.deleteNote)
-notesRoutes.get("/note/update_note/:id",notesControllers.renderUpdateNote)
+notesRoutes.get("/note/create_note",isLoggedIn, notesControllers.newNoteForm)
+notesRoutes.get("/note/delete_note/:id",isLoggedIn,notesControllers.deleteNote)
+notesRoutes.get("/note/update_note/:id",isLoggedIn,notesControllers.renderUpdateNote)
 //POST ROUTES
-notesRoutes.post("/note/create_note", notesControllers.createNote)
-notesRoutes.post("/note/update_note/:id",notesControllers.updateNote)
+notesRoutes.post("/note/create_note",isLoggedIn, notesControllers.createNote)
+notesRoutes.post("/note/update_note/:id",isLoggedIn,notesControllers.updateNote)
 //UPDATE ROUTES
 
 
